@@ -4,6 +4,9 @@ const webpack = require('webpack');
 module.exports = {
   mode: 'production',
   devtool: 'source-map',
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
   entry: {
     application: './app/javascript/application.js',
   },
