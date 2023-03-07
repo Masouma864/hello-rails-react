@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   namespace :api do
-    namespace :v1 do
-      resources :messages, only: [:index]
-    end
+    get 'messages/random', to: 'messages#random'
   end
-  root to: 'static_pages#index'
+  root to: 'static_pages#home'
 end
