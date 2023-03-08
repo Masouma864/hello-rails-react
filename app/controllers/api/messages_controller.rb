@@ -1,6 +1,6 @@
 class Api::MessagesController < ApplicationController
     def random
-      greetings = Message.all.sample.slice(:text)
+      greetings = Message.all.sample(:text)
       render json: greetings
     end
   end
